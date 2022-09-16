@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0 50px;
+    font-size: 16px;
+    background-color: lightgray;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(23, 19, 19);
+    text-decoration: underline;
+}
+
+p {
+    margin: 12px;
+    line-height: 22px;
+}
+
+input:required:valid {
+    border-color: green;
+}
+
+.fieldset {
+    width: 500px;
+    height: 160px;
+    padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.legeng {
+    margin: auto;
+}
+
+.star {
+    color: red;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+.star.black {
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.subscription {
+    padding-left: 25px;
+    color:rgb(99, 93, 93);
+    font-size: 14px;
+}
+
+.petInfo {
+    margin-top: 45px;
+}
+
+.agree {
+    margin-top: 30px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.checkbox:invalid {
+    color: red;
+}

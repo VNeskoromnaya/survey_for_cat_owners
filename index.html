@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="normalize" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey for cat owners</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Опросник для выявления счастливых котиков</h1>
+        <p>Если у тебя есть котик, не проходи мимо. Ответь на пару наших вопросов. <br />
+            Это займет не более 2 мин твоего времени, а нам поможет оценить, скольким котикам повезло обрести свой дом и
+            семью в этом мире.</p>
+        <p>Поля со<span class="star">*</span> обязательны к заполнению</p>
+
+        <form action="#" class="form" id="form">
+            <fieldset class="fieldset">
+                <legend class="legeng">Информация о владельце кота</legend>
+                    <div>
+                        <label for="catOwnerName">Ваше имя</label>&nbsp;&nbsp;&nbsp;
+                        <input type="text" name="catOwnerName" id="catOwnerName" required /><span class="star">*</span>
+                    </div>
+
+                    <div>
+                        <label for="email">Ваш e-mail</label>&nbsp;
+                        <input type="email" name="email" id="email" required /><span class="star">*</span>
+                    </div>
+
+                    <div>
+                        <label for="tel">Телефон</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="te" name="tel" id="tel" min="10" max="12" placeholder="+380xx xxx-xx-xx" pattern="^[\+]\d{5}\s\d{3}[\-]\d{2}[\-]\d{2}$" /><span class="star black">(по желанию)</span>
+                    </div>
+                </fieldset>
+                    <p class="subscription"><i>Если готовы получать нашу рассылку 1 раз в неделю по пятницам, <br /> поставьте галочку 
+                            <label for="subscription" style="color:rgb(13, 100, 51)"><b>"Хочу"</b><input type="checkbox"
+                                    name="subscription" id="subscription" /></label></i>
+                    </p>
+                
+            
+            <div class="petInfo">        
+                <div>
+                    <label for="catname">1. Кличка питомца</label>&nbsp;&nbsp;
+                    <input type="text" id="catname" name="catname" required /><span class="star">*</span>
+                </div>
+                <br />
+
+                <div>
+                    <label for="breed">2. Порода питомца &nbsp;&nbsp; </label>
+                    <select name="breed" id="breed" style="color:navy" required>
+                        <option selected></option>
+                        <option value="breed1">Персидская кошка</option>
+                        <option value="breed2">Мейн-кун</option>
+                        <option value="breed3">Британская короткошерстная кошка</option>
+                        <option value="breed4">Норвежская лесная кошка</option>
+                        <option value="breed5">Сибирская кошка</option>
+                        <option value="breed6">Скоттиш-фолд/Шотландская вислоухая кошка</option>
+                        <option value="breed7">Русская голубая кошка</option>
+                        <option value="breed8">Не знаю породу, так как подобрал котенком на улице</option>
+                    </select><span class="star">*</span>
+                </div>
+                <br />
+
+                <div>
+                    <label for="other_breed">Если порода твоего питомца отсутствует в списке, ты можешь указать ее здесь:
+                        &nbsp;</label>
+                    <input type="text" name="other_breed" id="other_breed" />
+                </div>
+                <br />
+
+                <div class="checkboxs" multiple required>
+                    <p>3. Чем питается Ваш питомец:</p>
+                    <div>
+                        <input type="checkbox" name="feed_dry" />сухой корм
+                    </div>
+                    <div>
+                        <input type="checkbox" name="feed_wet" />влажный корм
+                    </div>
+                    <div>
+                        <input type="checkbox" name="feed_natural" />натуральный корм
+                    </div>
+                </div>
+                <br />
+
+                <div>
+                    <p>3a. А чем из этого при случае также питается Ваш питомец? <span class="star">*</span></p>
+                    <select multiple required>
+                        <option value="fish">рыба</option>
+                        <option value="meat">мясо</option>
+                        <option value="milk">молочко</option>
+                    </select>
+                </div>
+                <br />
+
+                <div>
+                    <p>4. Кто Ваш питомец: <span class="star">*</span></p>
+                    <div>
+                        <input type="radio" name="animalsex" value="m" required>cамец
+                        <br />
+                        <input type="radio" name="animalsex" value="f" required>cамка
+                    </div>
+                    <br />
+                </div>
+                <br />
+
+                <div>
+                    <p>5. Ваш комментарий <br /><i>(в этом поле можете оставить любую дополнительную информацию о своем питомце,
+                        его привычках, как вы с ним ладите, забавные истории и т.д.)</i></p>
+                    <textarea name="comments" rows="10" cols="45"></textarea>
+                </div>
+                <br />
+
+                <div>
+                    <p>6. Поделитесь с нами фотографией своего питомца</p>
+                    <input type="file" name="file" />
+                </div>
+                <br />
+            </div>
+
+            <div">
+                <div class="agree">
+                    <input type="checkbox" class="checkbox" required>    Даю согласие на обработку своих персональных данных
+                </div>
+                <button type="submit" style="color:navy">Сохранить</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

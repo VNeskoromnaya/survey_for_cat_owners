@@ -45,12 +45,18 @@
             <div class="petInfo">        
                 <div>
                     <label for="catname">1. Кличка питомца</label>&nbsp;&nbsp;
-                    <input type="text" id="catname" name="catname" required /><span class="star">*</span>
+                    <input type="text" id="catName" name="catname" required /><span class="star">*</span>
+                </div>
+                <br>    
+
+                <div>
+                    <label for="catAge">2. Сколько лет вашему питомцу? <span>(Если меньше года, укажите "0")</span></label>&nbsp;&nbsp;
+                    <input type="text" id="catAge" name="catAge" required /><span class="star">*</span>
                 </div>
                 <br />
 
                 <div>
-                    <label for="breed">2. Порода питомца &nbsp;&nbsp; </label>
+                    <label for="breed">3. Порода питомца &nbsp;&nbsp; </label>
                     <select name="breed" id="breed" style="color:navy" required>
                         <option selected></option>
                         <option value="breed1">Персидская кошка</option>
@@ -61,6 +67,7 @@
                         <option value="breed6">Скоттиш-фолд/Шотландская вислоухая кошка</option>
                         <option value="breed7">Русская голубая кошка</option>
                         <option value="breed8">Не знаю породу, так как подобрал котенком на улице</option>
+                        <option value="breed9">В списке нет породы моего питомца</option>
                     </select><span class="star">*</span>
                 </div>
                 <br />
@@ -68,49 +75,49 @@
                 <div>
                     <label for="other_breed">Если порода твоего питомца отсутствует в списке, ты можешь указать ее здесь:
                         &nbsp;</label>
-                    <input type="text" name="other_breed" id="other_breed" />
+                    <input type="text" name="other_breed" id="breedOther" />
                 </div>
                 <br />
 
                 <div class="checkboxs" multiple required>
-                    <p>3. Чем питается Ваш питомец:</p>
+                    <p>4. Чем питается Ваш питомец:</p>
                     <div>
-                        <input type="checkbox" name="feed_dry" />сухой корм
+                        <input type="checkbox" value='dry food' name="food" />сухой корм
                     </div>
                     <div>
-                        <input type="checkbox" name="feed_wet" />влажный корм
+                        <input type="checkbox" value='wet food' name="food" />влажный корм
                     </div>
                     <div>
-                        <input type="checkbox" name="feed_natural" />натуральный корм
+                        <input type="checkbox" value='natural food' name="food" />натуральный корм
                     </div>
                 </div>
                 <br />
 
-                <div>
-                    <p>3a. А чем из этого при случае также питается Ваш питомец? <span class="star">*</span></p>
-                    <select multiple required>
+                <!-- <div>
+                    <p>4a. А чем из этого при случае также питается Ваш питомец?</p>
+                    <select multiple>
                         <option value="fish">рыба</option>
                         <option value="meat">мясо</option>
                         <option value="milk">молочко</option>
                     </select>
                 </div>
-                <br />
+                <br /> -->
 
                 <div>
-                    <p>4. Кто Ваш питомец: <span class="star">*</span></p>
+                    <p>5. Кто Ваш питомец: <span class="star">*</span></p>
                     <div>
-                        <input type="radio" name="animalsex" value="m" required>cамец
+                        <input type="radio" name="animalSex" value="male" required>cамец
                         <br />
-                        <input type="radio" name="animalsex" value="f" required>cамка
+                        <input type="radio" name="animalSex" value="female" required>cамка
                     </div>
                     <br />
                 </div>
                 <br />
 
                 <div>
-                    <p>5. Ваш комментарий <br /><i>(в этом поле можете оставить любую дополнительную информацию о своем питомце,
+                    <p>6. Ваш комментарий <br /><i>(в этом поле можете оставить любую дополнительную информацию о своем питомце,
                         его привычках, как вы с ним ладите, забавные истории и т.д.)</i></p>
-                    <textarea name="comments" rows="10" cols="45"></textarea>
+                    <textarea id='comment' name="comments" rows="10" cols="45"></textarea>
                 </div>
                 <br />
 
@@ -125,12 +132,13 @@
                 <div class="agree">
                     <input type="checkbox" class="checkbox" required>    Даю согласие на обработку своих персональных данных
                 </div>
-                <button type="submit" style="color:navy">Сохранить</button>
+                <button type="button" id='btnSubmit' style="color:navy">Сохранить</button>
             </div>
 
         </form>
     </div>
 
+    <script src="index.js"></script>
 </body>
 
 </html>

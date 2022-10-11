@@ -34,7 +34,7 @@ input:required:valid {
 }
 
 .fieldset {
-    width: 500px;
+    width: 60%;
     height: 160px;
     padding: 15px 35px;
     display: flex;
